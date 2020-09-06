@@ -1,4 +1,5 @@
 nano-cli
+*.o
 
 src/nng/CMakeLists.txt.user
 src/nng/CMakeCache.txt
