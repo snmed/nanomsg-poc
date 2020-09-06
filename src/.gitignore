@@ -1,0 +1,13 @@
+nano-cli
+
+src/nng/CMakeLists.txt.user
+src/nng/CMakeCache.txt
+src/nng/CMakeFiles
+src/nng/CMakeScripts
+src/nng/Testing
+src/nng/Makefile
+src/nng/cmake_install.cmake
+src/nng/install_manifest.txt
+src/nng/compile_commands.json
+src/nng/CTestTestfile.cmake
+src/nng/_deps
