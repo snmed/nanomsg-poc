@@ -1,5 +1,6 @@
 # NNG PoC
 
+
 ## Build Go Client / Server
 Build go client:
 ```bash
@@ -14,6 +15,16 @@ $ go build
 ```
 
 ## Build C++ Client
+**Requirments**:
+- cmake (Windows & MacOS)
+- make (MacOS)
+
+Install submodule with:
+```bash
+$ git submodule init
+$ git submodule update --recursive
+```
+
 Switching into the `src` directory and run the following commands:
 
 Windows:
