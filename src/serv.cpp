@@ -1,4 +1,5 @@
 
+#include <string> // use for windows getline
 #include <iostream>
 #include <nng/nng.h>
 #include <nng/protocol/reqrep0/rep.h>
@@ -14,6 +15,7 @@ void fatal(const char *func, int rv)
 
 int main()
 {
+    cout << "Welcome to NNG example cli..." << endl;
     const char *url = "ipc:///tmp/test.ipc";
     nng_socket sock;
     int rv;
@@ -27,9 +29,10 @@ int main()
     {
         fatal("nng_dial", rv);
     }
-
     string msg = "";
-    char *buf = new char[1L << 31];
+    size_t buf_sz = 1024 * 1024 * 2; // 2Mb
+    char *buf = new char[buf_sz];
+
     for (;;)
     {
         cout << "Enter your name: ";
@@ -45,7 +48,7 @@ int main()
             continue;
         }
 
-        size_t sz = 1L << 31;
+        size_t sz = buf_sz;
         memset(buf, 0, sz);
         rv = nng_recv(sock, buf, &sz, 0);
         if (rv != 0)

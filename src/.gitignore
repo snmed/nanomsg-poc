@@ -1,5 +1,8 @@
 nano-cli
 *.o
+*.obj
+*.exe
+*.dll
 
 src/nng/CMakeLists.txt.user
 src/nng/CMakeCache.txt
